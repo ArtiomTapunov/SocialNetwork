@@ -1,10 +1,10 @@
 ﻿using SN.DAL.EFContexts;
-using SN.DAL.Entities;
 using SN.DAL.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Data.Entity;
+using SN.DAL.Entities;
 
 namespace SN.DAL.Repositories
 {
@@ -39,7 +39,7 @@ namespace SN.DAL.Repositories
 
         public void Delete(string id)
         {
-            Message message = dbContext.Messages.Find(id);
+            var message = dbContext.Messages.Find(id);
 
             if (message != null)
                 dbContext.Messages.Add(message);

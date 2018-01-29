@@ -18,7 +18,7 @@ namespace SN.DAL.Entities
         public bool LockoutEnabled { get; set; }
         public int AccessFailedCount { get; set; }
         public string UserName { get; set; }
-	public ICollection<Message> Messages { get; set; }
+	    public ICollection<Message> Messages { get; set; }
 
         //public bool IsOnline { get; set; }
         //ICollection<User> Friends { get; set; }     
