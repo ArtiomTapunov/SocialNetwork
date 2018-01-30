@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace SN.DAL.Entities
+namespace SN.DomainModels
 {
     public class User
     {
@@ -18,7 +20,7 @@ namespace SN.DAL.Entities
         public bool LockoutEnabled { get; set; }
         public int AccessFailedCount { get; set; }
         public string UserName { get; set; }
-	    public ICollection<Message> Messages { get; set; }
+        public ICollection<Message> Messages { get; set; }
 
         //public bool IsOnline { get; set; }
         //ICollection<User> Friends { get; set; }     

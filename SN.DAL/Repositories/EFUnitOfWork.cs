@@ -1,10 +1,11 @@
-﻿using SN.DAL.Interfaces;
-using SN.DAL.Entities;
-using SN.DAL.Repositories;
+﻿using SN.DAL.EF;
+using SN.DAL.Interfaces;
+using SN.DomainModels;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
-using SN.DAL.EFContexts;
+using System.Threading.Tasks;
 
 namespace SN.DAL.Repositories
 {

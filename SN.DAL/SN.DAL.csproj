@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F2885208-8CBB-44A6-B92D-12E8F0086F3A}</ProjectGuid>
+    <ProjectGuid>{1D447B99-02D9-4783-9ED4-7FB11863879B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SN.DAL</RootNamespace>
@@ -57,7 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SN.DomainModels\SN.DomainModels.csproj">
-      <Project>{e59913f1-9cb7-4892-89c1-e6375e3f482b}</Project>
+      <Project>{a4fcb409-eeed-4cb5-bc18-c44c42ffc9e4}</Project>
       <Name>SN.DomainModels</Name>
     </ProjectReference>
   </ItemGroup>
