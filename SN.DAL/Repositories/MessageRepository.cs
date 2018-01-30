@@ -1,10 +1,20 @@
+<<<<<<< HEAD
 ﻿using SN.DAL.EFContexts;
+=======
+﻿using SN.DAL.EF;
+>>>>>>> Added BLL and DomainModels projects. Recreated DAL
 using SN.DAL.Interfaces;
+using SN.DomainModels;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Data.Entity;
+<<<<<<< HEAD
 using SN.DAL.Entities;
+=======
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+>>>>>>> Added BLL and DomainModels projects. Recreated DAL
 
 namespace SN.DAL.Repositories
 {

@@ -20,7 +20,11 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
+<<<<<<< HEAD
 [assembly: Guid("f2885208-8cbb-44a6-b92d-12e8f0086f3a")]
+=======
+[assembly: Guid("1d447b99-02d9-4783-9ed4-7fb11863879b")]
+>>>>>>> Added BLL and DomainModels projects. Recreated DAL
 
 // Version information for an assembly consists of the following four values:
 //
