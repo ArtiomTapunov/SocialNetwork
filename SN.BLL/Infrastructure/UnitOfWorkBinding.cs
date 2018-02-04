@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SN.BLL.Infrastructure
 {
-    class UnitOfWorkBinding : NinjectModule
+    public class UnitOfWorkBinding : NinjectModule
     {
         private string connectionString;
 

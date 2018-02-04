@@ -1,3 +1,10 @@
-﻿@{
+﻿@model IEnumerable<SN.DomainModels.User>
+
+@{
     ViewBag.Title = "Home Page";
+}
+
+@foreach(var user in Model)
+{
+    <p>@user.UserName</p>
 }

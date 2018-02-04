@@ -12,11 +12,16 @@ namespace SN.BLL.Services
     public class UserService : IUserService
     {
 
-        private readonly IRepository<User> userRepository;
+        IUnitOfWork Database { get; set; }
 
-        public UserService(IRepository<User> _userRepository)
+        public UserService(IUnitOfWork uow)
         {
-            userRepository = _userRepository;
+            Database = uow;
+        }
+
+        public IEnumerable<User> GetAllUsers()
+        {
+            return Database.Users.GetAll();
         }
 
         //Realization business logic for users

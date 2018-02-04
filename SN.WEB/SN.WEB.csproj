@@ -289,9 +289,13 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SN.DAL\SN.DAL.csproj">
-      <Project>{1D447B99-02D9-4783-9ED4-7FB11863879B}</Project>
-      <Name>SN.DAL</Name>
+    <ProjectReference Include="..\SN.BLL\SN.BLL.csproj">
+      <Project>{fc35596d-4182-4f32-945f-4535c25bf12d}</Project>
+      <Name>SN.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SN.DomainModels\SN.DomainModels.csproj">
+      <Project>{a4fcb409-eeed-4cb5-bc18-c44c42ffc9e4}</Project>
+      <Name>SN.DomainModels</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

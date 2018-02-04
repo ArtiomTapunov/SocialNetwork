@@ -1,5 +1,4 @@
 ﻿using SN.BLL.Interfaces;
-<<<<<<< HEAD
 using SN.DAL.Interfaces;
 using SN.DomainModels;
 using System;
@@ -12,11 +11,11 @@ namespace SN.BLL.Services
 {
     public class MessageService : IMessageService
     {
-        private readonly IRepository<Message> messageRepository;
+        IUnitOfWork Database { get; set; }
 
-        public MessageService(IRepository<Message> _messageRepository)
+        public MessageService(IUnitOfWork uow)
         {
-            messageRepository = _messageRepository;
+            Database = uow;
         }
 
         //Business logic for messages
