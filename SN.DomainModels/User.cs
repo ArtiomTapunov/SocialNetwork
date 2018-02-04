@@ -20,11 +20,7 @@ namespace SN.DomainModels
         public bool LockoutEnabled { get; set; }
         public int AccessFailedCount { get; set; }
         public string UserName { get; set; }
-<<<<<<< HEAD:SN.DomainModels/User.cs
 	    public ICollection<Message> Messages { get; set; }
-=======
-        public ICollection<Message> Messages { get; set; }
->>>>>>> Added BLL and DomainModels projects. Recreated DAL:SN.DomainModels/User.cs
 
         //public bool IsOnline { get; set; }
         //ICollection<User> Friends { get; set; }     
