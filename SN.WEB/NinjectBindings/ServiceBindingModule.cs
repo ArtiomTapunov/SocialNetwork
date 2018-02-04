@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Ninject.Modules;
+using SN.DAL.Interfaces;
 
 namespace SN.WEB.NinjectBindings
 {
@@ -17,7 +18,7 @@ namespace SN.WEB.NinjectBindings
 
         public override void Load()
         {
-            Bind<IUnitOfWork>().To<EFUnitOfWork>().WithConstructorArgument(connectionString);
+            Bind<IUnitOfWork>().To<IUnitOfWork>().WithConstructorArgument(connectionString);
         }
     }
 }

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SN.DomainModels")]
+[assembly: AssemblyTitle("SN.DAL")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SN.DomainModels")]
+[assembly: AssemblyProduct("SN.DAL")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,11 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a4fcb409-eeed-4cb5-bc18-c44c42ffc9e4")]
+<<<<<<< HEAD
+[assembly: Guid("f2885208-8cbb-44a6-b92d-12e8f0086f3a")]
+=======
+[assembly: Guid("1d447b99-02d9-4783-9ed4-7fb11863879b")]
+>>>>>>> Added BLL and DomainModels projects. Recreated DAL
 
 // Version information for an assembly consists of the following four values:
 //
