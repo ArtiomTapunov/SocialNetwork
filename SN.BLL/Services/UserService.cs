@@ -1,4 +1,5 @@
 ﻿using SN.BLL.Interfaces;
+using SN.DAL.EF;
 using SN.DAL.Interfaces;
 using SN.DomainModels;
 using System;
@@ -11,15 +12,15 @@ namespace SN.BLL.Services
 {
     public class UserService : IUserService
     {
-
-        IUnitOfWork Database { get; set; }
+        
+        private readonly IUnitOfWork Database;
 
         public UserService(IUnitOfWork uow)
         {
             Database = uow;
         }
 
-        public IEnumerable<User> GetAllUsers()
+        public IEnumerable<ApplicationUser> GetAllUsers()
         {
             return Database.Users.GetAll();
         }

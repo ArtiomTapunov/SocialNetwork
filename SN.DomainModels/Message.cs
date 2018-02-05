@@ -11,8 +11,8 @@ namespace SN.DomainModels
         public int Id { get; set; }
         public string Text { get; set; }
         public DateTime SentDate { get; set; }
-        public User From { get; set; }
-        public User To { get; set; }
+        public ApplicationUser From { get; set; }
+        public ApplicationUser To { get; set; }
 
         //public bool IsRead { get; set }
     }

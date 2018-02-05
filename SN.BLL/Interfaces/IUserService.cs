@@ -1,4 +1,5 @@
-﻿using SN.DomainModels;
+﻿using SN.DAL.EF;
+using SN.DomainModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace SN.BLL.Interfaces
 {
     public interface IUserService
     {
-        IEnumerable<User> GetAllUsers();
+        IEnumerable<ApplicationUser> GetAllUsers();
 
         //Business logic abstract for users
     }

@@ -15,7 +15,7 @@ namespace SN.BLL.Infrastructure
 
         public UnitOfWorkBinding(string connection)
         {
-            connectionString = connection;
+            connectionString = "Data Source=DESKTOP-RB8PI6P;Initial Catalog=TestDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         }
 
         public override void Load()

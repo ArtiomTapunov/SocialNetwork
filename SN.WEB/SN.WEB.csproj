@@ -208,7 +208,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="NinjectBindings\ServiceBindingModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -292,6 +291,10 @@
     <ProjectReference Include="..\SN.BLL\SN.BLL.csproj">
       <Project>{fc35596d-4182-4f32-945f-4535c25bf12d}</Project>
       <Name>SN.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SN.DAL\SN.DAL.csproj">
+      <Project>{1d447b99-02d9-4783-9ed4-7fb11863879b}</Project>
+      <Name>SN.DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\SN.DomainModels\SN.DomainModels.csproj">
       <Project>{a4fcb409-eeed-4cb5-bc18-c44c42ffc9e4}</Project>

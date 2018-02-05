@@ -12,9 +12,9 @@ namespace SN.DAL.Repositories
 {
     public class MessageRepository : IRepository<Message>
     {
-        MessageContext dbContext;
+        ApplicationDbContext dbContext;
 
-        public MessageRepository(MessageContext context)
+        public MessageRepository(ApplicationDbContext context)
         {
             dbContext = context;
         }

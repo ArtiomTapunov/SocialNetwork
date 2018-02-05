@@ -5,6 +5,8 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
+using SN.DAL.EF;
+using SN.DomainModels;
 using SN.WEB.Models;
 
 namespace SN.WEB

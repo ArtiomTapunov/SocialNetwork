@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SN.DomainModels.User>
+﻿@model IEnumerable<SN.DomainModels.ApplicationUser>
 
 @{
     ViewBag.Title = "Home Page";
@@ -6,5 +6,4 @@
 
 @foreach(var user in Model)
 {
-    <p>@user.UserName</p>
-}
+    <p>@user.Email</p>

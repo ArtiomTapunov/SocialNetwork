@@ -10,6 +10,8 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
+using SN.DAL.EF;
+using SN.DomainModels;
 using SN.WEB.Models;
 
 namespace SN.WEB

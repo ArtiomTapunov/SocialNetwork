@@ -11,13 +11,13 @@ namespace SN.DAL.Repositories
 {
     public class EFUnitOfWork : IUnitOfWork
     {
-        MessageContext dbContext;
+        ApplicationDbContext dbContext;
         MessageRepository messageRepository;
         UserRepository userRepository;
 
         public EFUnitOfWork(string connectionString)
         {
-            dbContext = new MessageContext(connectionString);
+            dbContext = new ApplicationDbContext(); 
         }
 
         public IRepository<Message> Messages
@@ -30,7 +30,7 @@ namespace SN.DAL.Repositories
             }
         }
 
-        public IRepository<User> Users
+        public IRepository<ApplicationUser> Users
         {
             get
             {
