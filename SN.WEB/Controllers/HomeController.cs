@@ -10,17 +10,16 @@ namespace SN.WEB.Controllers
     public class HomeController : Controller
     {
 
-        private readonly IUserService userService;
 
-        public HomeController(IUserService userService)
+        public HomeController()
         {
-            this.userService = userService;
+            
         }
 
 
         public ActionResult Index()
         {
-            return View(userService.GetAllUsers());
+            return View();
         }
 
         public ActionResult About()
