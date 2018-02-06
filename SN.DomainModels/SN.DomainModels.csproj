@@ -53,13 +53,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract classes\Document.cs" />
     <Compile Include="ApplicationUser.cs" />
+    <Compile Include="Like.cs" />
     <Compile Include="Message.cs" />
+    <Compile Include="Photo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserDocument.cs" />
+    <Compile Include="Video.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,6 +12,15 @@ namespace SN.BLL.Interfaces
     {
         IEnumerable<ApplicationUser> GetAllUsers();
 
+        void AddFriend(ApplicationUser user);
+
+        void RemoveFriend(int id);
+
+        IEnumerable<ApplicationUser> GetAllFriends();
+
+
+
+
         //Business logic abstract for users
     }
 }

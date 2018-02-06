@@ -20,9 +20,24 @@ namespace SN.BLL.Services
             Database = uow;
         }
 
+        public void AddFriend(ApplicationUser user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<ApplicationUser> GetAllFriends()
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<ApplicationUser> GetAllUsers()
         {
             return Database.Users.GetAll();
+        }
+
+        public void RemoveFriend(int id)
+        {
+            throw new NotImplementedException();
         }
 
         //Realization business logic for users
