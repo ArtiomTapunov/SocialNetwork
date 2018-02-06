@@ -9,6 +9,6 @@ namespace SN.DomainModels
 {
     public class UserDocument : Document
     {
-
+        public int DownloadAmount { get; set; }
     }
 }

@@ -40,6 +40,14 @@ namespace SN.DAL.EF
         }
 
         public DbSet<Message> Messages { get; set; }
+
+        //public DbSet<Like> Likes { get; set; }
+
+        //public DbSet<Video> Videos { get; set; }
+
+        //public DbSet<Photo> Photos { get; set; }
+
+        //public DbSet<Post> Posts { get; set; }
     }
 }
 
