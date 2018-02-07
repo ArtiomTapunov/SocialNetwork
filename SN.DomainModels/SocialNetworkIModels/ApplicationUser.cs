@@ -9,11 +9,11 @@ namespace SN.DomainModels
 {
     public class ApplicationUser : IdentityUser
     {
-        //public ICollection<Message> Messages { get; set; }
+        public ICollection<Message> Messages { get; set; }
 
-        //public bool IsOnline { get; set; }
+        public bool IsOnline { get; set; }
 
-        //public ICollection<ApplicationUser> Friends { get; set; }
+        public ICollection<ApplicationUser> Friends { get; set; }
 
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)

@@ -13,7 +13,6 @@ namespace SN.DomainModels
         public DateTime SentDate { get; set; }
         public ApplicationUser From { get; set; }
         public ApplicationUser To { get; set; }
-
-        //public bool IsRead { get; set }
+        public bool IsRead { get; set; }
     }
 }
