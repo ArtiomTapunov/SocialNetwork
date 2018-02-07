@@ -17,7 +17,7 @@ namespace SN.DAL.Repositories
 
         public EFUnitOfWork(string connectionString)
         {
-            dbContext = new ApplicationDbContext(); 
+            dbContext = new ApplicationDbContext(connectionString); 
         }
 
         public IRepository<Message> Messages

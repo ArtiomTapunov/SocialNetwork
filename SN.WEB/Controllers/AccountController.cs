@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.Linq;
+using System.Net;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
@@ -8,6 +9,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using SN.BLL.Interfaces;
 using SN.DomainModels;
 using SN.WEB.Models;
 
@@ -18,15 +20,17 @@ namespace SN.WEB.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private IUserService userService;
 
         public AccountController()
         {
         }
 
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
+        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager, IUserService userService )
         {
             UserManager = userManager;
             SignInManager = signInManager;
+            this.userService = userService;
         }
 
         public ApplicationSignInManager SignInManager
@@ -50,6 +54,46 @@ namespace SN.WEB.Controllers
             private set
             {
                 _userManager = value;
+            }
+        }
+
+        //
+        // POST: /Account/DeleteUser
+        [AllowAnonymous]
+        public async Task<ActionResult> DeleteUser(string id)
+        {
+            if (ModelState.IsValid)
+            {
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+
+                var user = await UserManager.FindByIdAsync(id);
+                var logins = user.Logins;
+                var rolesForUser = await UserManager.GetRolesAsync(id);
+
+                foreach (var login in logins.ToList())
+                {
+                    await UserManager.RemoveLoginAsync(login.UserId, new UserLoginInfo(login.LoginProvider, login.ProviderKey));
+                }
+
+                if (rolesForUser.Count() > 0)
+                {
+                    foreach (var item in rolesForUser.ToList())
+                    {
+                        // item should be the name of the role
+                        var result = await UserManager.RemoveFromRoleAsync(user.Id, item);
+                    }
+                }
+
+                await UserManager.DeleteAsync(user);
+
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                return View("Index", "Home");
             }
         }
 

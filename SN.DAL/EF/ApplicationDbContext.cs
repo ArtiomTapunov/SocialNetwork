@@ -13,6 +13,7 @@ namespace SN.DAL.EF
     {
         private static readonly object Lock = new object();
         private static bool _databaseInitialized;
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -32,6 +33,12 @@ namespace SN.DAL.EF
             //        _databaseInitialized = true;
             //    }
             //}
+        }
+
+        public ApplicationDbContext(string connectionString)
+            : base(connectionString, throwIfV1Schema: false)
+        {
+
         }
 
         public static ApplicationDbContext Create()
