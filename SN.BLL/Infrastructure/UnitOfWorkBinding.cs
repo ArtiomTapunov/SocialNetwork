@@ -15,7 +15,7 @@ namespace SN.BLL.Infrastructure
 
         public UnitOfWorkBinding(string connection)
         {
-            connectionString = "DefaultConnection";
+            connectionString = connection;
         }
 
         public override void Load()
