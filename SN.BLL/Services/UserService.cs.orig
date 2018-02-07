@@ -1,11 +1,8 @@
 ﻿using SN.BLL.Interfaces;
 <<<<<<< HEAD
-using SN.DAL.Entities;
-using SN.DAL.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using SN.DAL.EF;
 =======
+>>>>>>> 212c1b7fc2ab0a4f53d6c6bf50db84eb9113db71
 using SN.DAL.Interfaces;
 using SN.DomainModels;
 using System;
@@ -13,18 +10,46 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
->>>>>>> Added BLL and DomainModels projects. Recreated DAL
 
 namespace SN.BLL.Services
 {
     public class UserService : IUserService
     {
+<<<<<<< HEAD
+        
+        private readonly IUnitOfWork Database;
+
+        public UserService(IUnitOfWork uow)
+        {
+            Database = uow;
+        }
+
+        public void AddFriend(ApplicationUser user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<ApplicationUser> GetAllFriends()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<ApplicationUser> GetAllUsers()
+        {
+            return Database.Users.GetAll();
+        }
+
+        public void RemoveFriend(int id)
+        {
+            throw new NotImplementedException();
+=======
 
         private readonly IRepository<User> userRepository;
 
         public UserService(IRepository<User> _userRepository)
         {
             userRepository = _userRepository;
+>>>>>>> 212c1b7fc2ab0a4f53d6c6bf50db84eb9113db71
         }
 
         //Realization business logic for users

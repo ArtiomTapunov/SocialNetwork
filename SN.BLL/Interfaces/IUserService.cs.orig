@@ -1,17 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
 <<<<<<< HEAD
-using System.Text;
+﻿using SN.DAL.EF;
+using SN.DomainModels;
+using System;
 =======
+﻿using System;
+>>>>>>> 212c1b7fc2ab0a4f53d6c6bf50db84eb9113db71
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
->>>>>>> Added BLL and DomainModels projects. Recreated DAL
 
 namespace SN.BLL.Interfaces
 {
     public interface IUserService
     {
+<<<<<<< HEAD
+        IEnumerable<ApplicationUser> GetAllUsers();
+
+        void AddFriend(ApplicationUser user);
+
+        void RemoveFriend(int id);
+
+        IEnumerable<ApplicationUser> GetAllFriends();
+
+
+
+
+=======
+>>>>>>> 212c1b7fc2ab0a4f53d6c6bf50db84eb9113db71
         //Business logic abstract for users
     }
 }

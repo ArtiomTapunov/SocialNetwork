@@ -1,28 +1,24 @@
 <<<<<<< HEAD
-﻿using SN.DAL.EFContexts;
+using SN.DAL.EF;
 =======
 ﻿using SN.DAL.EF;
->>>>>>> Added BLL and DomainModels projects. Recreated DAL
+>>>>>>> 212c1b7fc2ab0a4f53d6c6bf50db84eb9113db71
 using SN.DAL.Interfaces;
 using SN.DomainModels;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-<<<<<<< HEAD
-using SN.DAL.Entities;
-=======
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
->>>>>>> Added BLL and DomainModels projects. Recreated DAL
 
 namespace SN.DAL.Repositories
 {
     public class MessageRepository : IRepository<Message>
     {
-        MessageContext dbContext;
+        ApplicationDbContext dbContext;
 
-        public MessageRepository(MessageContext context)
+        public MessageRepository(ApplicationDbContext context)
         {
             dbContext = context;
         }

@@ -1,14 +1,14 @@
+<<<<<<< HEAD
+﻿namespace SN.BLL.Interfaces
+=======
 ﻿using System;
 using System.Collections.Generic;
-<<<<<<< HEAD
-using System.Text;
-=======
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
->>>>>>> Added BLL and DomainModels projects. Recreated DAL
 
 namespace SN.BLL.Interfaces
+>>>>>>> 212c1b7fc2ab0a4f53d6c6bf50db84eb9113db71
 {
     public interface IMessageService
     {

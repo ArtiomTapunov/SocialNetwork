@@ -4,11 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-<<<<<<< HEAD
-    <ProjectGuid>{7BDD4B30-576C-4928-B218-50CCA2733A2F}</ProjectGuid>
-=======
     <ProjectGuid>{FC35596D-4182-4F32-945F-4535C25BF12D}</ProjectGuid>
->>>>>>> Added BLL and DomainModels projects. Recreated DAL
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SN.BLL</RootNamespace>
@@ -34,10 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-=======
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
@@ -74,7 +66,6 @@
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
->>>>>>> Added BLL and DomainModels projects. Recreated DAL
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -83,10 +74,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-=======
     <Compile Include="Infrastructure\UnitOfWorkBinding.cs" />
->>>>>>> Added BLL and DomainModels projects. Recreated DAL
+<<<<<<< HEAD
+    <Compile Include="Interfaces\IDocumentService.cs" />
+=======
+>>>>>>> 212c1b7fc2ab0a4f53d6c6bf50db84eb9113db71
     <Compile Include="Interfaces\IMessageService.cs" />
     <Compile Include="Interfaces\IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,16 +87,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SN.DAL\SN.DAL.csproj">
-<<<<<<< HEAD
-      <Project>{f2885208-8cbb-44a6-b92d-12e8f0086f3a}</Project>
-      <Name>SN.DAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SN.DomainModels\SN.DomainModels.csproj">
-      <Project>{e59913f1-9cb7-4892-89c1-e6375e3f482b}</Project>
-      <Name>SN.DomainModels</Name>
-    </ProjectReference>
-  </ItemGroup>
-=======
       <Project>{1D447B99-02D9-4783-9ED4-7FB11863879B}</Project>
       <Name>SN.DAL</Name>
     </ProjectReference>
@@ -116,7 +98,9 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+<<<<<<< HEAD
+=======
   <ItemGroup />
->>>>>>> Added BLL and DomainModels projects. Recreated DAL
+>>>>>>> 212c1b7fc2ab0a4f53d6c6bf50db84eb9113db71
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,29 +1,32 @@
 ﻿using SN.BLL.Interfaces;
+using SN.DAL.Interfaces;
 <<<<<<< HEAD
-using SN.DAL.Entities;
-using SN.DAL.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 =======
-using SN.DAL.Interfaces;
 using SN.DomainModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
->>>>>>> Added BLL and DomainModels projects. Recreated DAL
+>>>>>>> 212c1b7fc2ab0a4f53d6c6bf50db84eb9113db71
 
 namespace SN.BLL.Services
 {
     public class MessageService : IMessageService
     {
+<<<<<<< HEAD
+        IUnitOfWork Database { get; set; }
+
+        public MessageService(IUnitOfWork uow)
+        {
+            Database = uow;
+=======
         private readonly IRepository<Message> messageRepository;
 
         public MessageService(IRepository<Message> _messageRepository)
         {
             messageRepository = _messageRepository;
+>>>>>>> 212c1b7fc2ab0a4f53d6c6bf50db84eb9113db71
         }
 
         //Business logic for messages
