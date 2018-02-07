@@ -53,14 +53,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract classes\Document.cs" />
-    <Compile Include="ApplicationUser.cs" />
-    <Compile Include="Like.cs" />
-    <Compile Include="Message.cs" />
-    <Compile Include="Photo.cs" />
+    <Compile Include="AbstratClasses\Document.cs" />
+    <Compile Include="SocialNetworkIModels\ApplicationUser.cs" />
+    <Compile Include="SocialNetworkIModels\Like.cs" />
+    <Compile Include="SocialNetworkIModels\Message.cs" />
+    <Compile Include="SocialNetworkIModels\Photo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserDocument.cs" />
-    <Compile Include="Video.cs" />
+    <Compile Include="SocialNetworkIModels\UserDocument.cs" />
+    <Compile Include="SocialNetworkIModels\Video.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
