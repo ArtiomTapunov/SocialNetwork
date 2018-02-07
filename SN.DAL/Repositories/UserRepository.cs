@@ -3,6 +3,9 @@ using SN.DAL.Interfaces;
 using SN.DomainModels;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace SN.DAL.Repositories
 {
