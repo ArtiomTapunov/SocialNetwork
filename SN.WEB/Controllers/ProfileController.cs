@@ -46,5 +46,10 @@ namespace SN.WEB.Controllers
         {
             return View(documentService.GetAllDocuments());
         }
+
+        public ActionResult Index()
+        {
+            return View("SocialNetworkView");
+        }
     }
 }

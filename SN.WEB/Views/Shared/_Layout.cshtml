@@ -53,31 +53,22 @@
         <div class="nav-wrapper teal">
             <a href="#" class="brand-logo">Social Network</a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            @Html.Partial("_LoginPartial")
+            @*<ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a>@Html.ActionLink("Start Page", "Index", "Home")</a></li>
                 <li><a>@Html.ActionLink("Application Info", "About", "Home")</a></li>
                 <li><a>@Html.ActionLink("Our contacts", "Contact", "Home")</a></li>
+
             </ul>
             <ul class="side-nav" id="mobile-demo">
+                <li><a>@Html.ActionLink("Start Page", "Index", "Home")</a></li>
                 <li><a>@Html.ActionLink("Application Info", "About", "Home")</a></li>
                 <li><a>@Html.ActionLink("Our contacts", "Contact", "Home")</a></li>
-            </ul>
+            </ul>*@
         </div>
-        @*<div class="nav-content">
-            <ul class="tabs tabs-transparent">
-                <li class="tab">@Html.ActionLink("Sign UP", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-                <li class="tab">@Html.ActionLink("Sign In", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
-                <li class="tab disabled"><a href="#test3">Disabled Tab</a></li>
-            </ul>
-        </div>*@
     </nav>
-    @*<div id="test1" class="col s12">Test 1</div>
-        <div id="test2" class="col s12">Test 2</div>
-        <div id="test3" class="col s12">Test 3</div>
-        <div id="test4" class="col s12">Test 4</div>*@
 
     <div class="container body-content">
-        @Html.ActionLink("Sign UP", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
-        @Html.ActionLink("Sign In", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
         @RenderBody()
     </div>
 

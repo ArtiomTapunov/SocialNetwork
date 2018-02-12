@@ -286,11 +286,10 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_SocialNetworkLayoutPage.cshtml" />
-    <Content Include="Views\Account\SocialNetworkView.cshtml" />
+    <Content Include="Views\Profile\SocialNetworkView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Profile\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
