@@ -9,10 +9,16 @@ namespace SN.WEB.Controllers
 {
     public class HomeController : Controller
     {
+        IUserService userService;
+
+        public HomeController(IUserService _userService)
+        {
+            userService = _userService;
+        }
 
         public ActionResult Index()
         {
-            return View();
+            return View(userService.GetAllUsers());
         }
 
         public ActionResult About()

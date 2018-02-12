@@ -1,3 +1,38 @@
-﻿@{
+﻿﻿@model IEnumerable<SN.DomainModels.ApplicationUser>
+
+@{
     ViewBag.Title = "Home Page";
 }
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+    </tr>
+
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => user.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => user.Email)
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "DeleteUser", "Account", new { id = user.Id }, null)
+            </td>
+            @*<td>
+                    @Html.ActionLink("Edit", "UpdateUser", new { id = user.Id })
+                </td>*@
+        </tr>
+    }
+</table>

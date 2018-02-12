@@ -44,6 +44,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     @Styles.Render("~/Content/css/materialize")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -54,17 +55,6 @@
             <a href="#" class="brand-logo">Social Network</a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             @Html.Partial("_LoginPartial")
-            @*<ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a>@Html.ActionLink("Start Page", "Index", "Home")</a></li>
-                <li><a>@Html.ActionLink("Application Info", "About", "Home")</a></li>
-                <li><a>@Html.ActionLink("Our contacts", "Contact", "Home")</a></li>
-
-            </ul>
-            <ul class="side-nav" id="mobile-demo">
-                <li><a>@Html.ActionLink("Start Page", "Index", "Home")</a></li>
-                <li><a>@Html.ActionLink("Application Info", "About", "Home")</a></li>
-                <li><a>@Html.ActionLink("Our contacts", "Contact", "Home")</a></li>
-            </ul>*@
         </div>
     </nav>
 
@@ -72,7 +62,7 @@
         @RenderBody()
     </div>
 
-    @*<footer class="page-footer teal">
+    <footer class="page-footer teal">
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
@@ -81,7 +71,7 @@
                             You can use rows and columns here to organize your footer content.
                         </p>
                     </div>
-                    <div class="col l4 offset-l2 s12">
+                    @*<div class="col l4 offset-l2 s12">
                         <h5 class="white-text">Sitemap</h5>
                         <ul>
                             <li>
@@ -101,7 +91,7 @@
                                    href="#!">Link 4</a>
                             </li>
                         </ul>
-                    </div>
+                    </div>*@
                 </div>
             </div>
 
@@ -112,7 +102,7 @@
                        href="#!">More Links</a>
                 </div>
             </div>
-        </footer>*@
+        </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
