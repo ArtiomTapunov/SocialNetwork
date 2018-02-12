@@ -22,6 +22,11 @@ namespace SN.WEB
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
+            bundles.Add(new ScriptBundle("~/Content/materializeJs").Include(
+                      "~/Content/js/materialize.min.js"));
+
+            bundles.Add(new StyleBundle("~/Content/css/materialize").Include(
+                      "~/Content/css/materialize.min.css"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
