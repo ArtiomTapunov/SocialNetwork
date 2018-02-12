@@ -43,7 +43,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css/materialize")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -54,12 +54,10 @@
             <a href="#" class="brand-logo">Social Network</a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a>@Html.ActionLink("Start page", "Index", "Home")</a></li>
                 <li><a>@Html.ActionLink("Application Info", "About", "Home")</a></li>
                 <li><a>@Html.ActionLink("Our contacts", "Contact", "Home")</a></li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
-                <li><a>@Html.ActionLink("Start page", "Index", "Home")</a></li>
                 <li><a>@Html.ActionLink("Application Info", "About", "Home")</a></li>
                 <li><a>@Html.ActionLink("Our contacts", "Contact", "Home")</a></li>
             </ul>
@@ -78,6 +76,8 @@
         <div id="test4" class="col s12">Test 4</div>*@
 
     <div class="container body-content">
+        @Html.ActionLink("Sign UP", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
+        @Html.ActionLink("Sign In", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
         @RenderBody()
     </div>
 

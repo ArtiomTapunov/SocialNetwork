@@ -56,9 +56,13 @@
     <Compile Include="EF\ApplicationDbContext.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Interfaces\IUnitOfWork.cs" />
-    <Compile Include="Migrations\201802071249030_MigrateDB.cs" />
-    <Compile Include="Migrations\201802071249030_MigrateDB.Designer.cs">
-      <DependentUpon>201802071249030_MigrateDB.cs</DependentUpon>
+    <Compile Include="Migrations\201802120754035_InitialCreate.cs" />
+    <Compile Include="Migrations\201802120754035_InitialCreate.Designer.cs">
+      <DependentUpon>201802120754035_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802120755202_UserMigration.cs" />
+    <Compile Include="Migrations\201802120755202_UserMigration.Designer.cs">
+      <DependentUpon>201802120755202_UserMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,8 +81,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201802071249030_MigrateDB.resx">
-      <DependentUpon>201802071249030_MigrateDB.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802120754035_InitialCreate.resx">
+      <DependentUpon>201802120754035_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802120755202_UserMigration.resx">
+      <DependentUpon>201802120755202_UserMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

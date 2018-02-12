@@ -9,7 +9,8 @@ namespace SN.DAL.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
+            ContextKey = "SN.DAL.EF.ApplicationDbContext";
         }
 
         protected override void Seed(SN.DAL.EF.ApplicationDbContext context)
