@@ -49,7 +49,7 @@ namespace SN.WEB.Controllers
 
         public ActionResult Index()
         {
-            return View("SocialNetworkView");
+            return View();
         }
     }
 }

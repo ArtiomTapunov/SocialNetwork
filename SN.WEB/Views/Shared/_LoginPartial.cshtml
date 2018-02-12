@@ -10,7 +10,7 @@
 
         <ul class="right hide-on-med-and-down">
             <li>
-                @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                @Html.ActionLink("Hello, " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
             </li>
             <li><a href="javascript:document.getElementById('logoutForm').submit()">Sign out</a></li>
             <li>@Html.ActionLink("Application Info", "About", "Home")</li>
@@ -20,11 +20,11 @@
 }
 else
 {
-        <ul class="right hide-on-med-and-down">
-            <li>@Html.ActionLink("Sign UP", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-            <li>@Html.ActionLink("Sign In", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
-            <li>@Html.ActionLink("Application Info", "About", "Home")</li>
-            <li>@Html.ActionLink("Our contacts", "Contact", "Home")</li>
-        </ul>
+    <ul class="right hide-on-med-and-down">
+        <li>@Html.ActionLink("Sign UP", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Sign In", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        <li>@Html.ActionLink("Application Info", "About", "Home")</li>
+        <li>@Html.ActionLink("Our contacts", "Contact", "Home")</li>
+    </ul>
 }
 

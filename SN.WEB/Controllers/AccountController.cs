@@ -133,7 +133,6 @@ namespace SN.WEB.Controllers
             {
                 case SignInStatus.Success:
                     return RedirectToLocal(returnUrl);
-                 //   return View("SocialNetworkView");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:

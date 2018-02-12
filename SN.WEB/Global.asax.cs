@@ -13,7 +13,7 @@ using SN.WEB.NinjectBindings;
 
 namespace SN.WEB
 {
-    public class MvcApplication : System.Web.HttpApplication
+    public class MvcApplication : HttpApplication
     {
         protected void Application_Start()
         {

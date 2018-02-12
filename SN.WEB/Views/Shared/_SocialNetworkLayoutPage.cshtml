@@ -1,40 +1,57 @@
 ﻿<!DOCTYPE html>
-
-<html>
-
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/css/materialize")
     @Scripts.Render("~/bundles/modernizr")
-    @Scripts.Render("~/Content/materialize")
 </head>
+
 <body>
-    <ul class="nav nav-pills nav-stacked">
+    <nav class="nav-extended teal">
+        <div class="nav-wrapper teal">
+            <a href="#" class="brand-logo">Social Network</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            @Html.Partial("_LoginPartial")
+        </div>
+    </nav>
 
-        <span class="glyphicon glyphicon-search"></span>
-        <li>@Html.ActionLink("Friends", "Index", "Home")</li>
 
-        <span class="glyphicon glyphicon-envelope"></span>
-        <li>@Html.ActionLink("Conversations", "About", "Home")</li>
+    <!----------------------------------------------------------------------------------------------------------------------------------->
 
-        <span class="glyphicon glyphicon-camera"></span>
-        <li>@Html.ActionLink("Photos", "Contact", "Home")</li>
 
-        <span class="glyphicon glyphicon-file"></span>
-        <li>@Html.ActionLink("Documents", "Contact", "Home")</li>
+        <ul class="nav nav-pills nav-stacked">
 
-        <span class="glyphicon glyphicon-film"></span>
-        <li>@Html.ActionLink("Videos", "Contact", "Home")</li>
+            <span class="glyphicon glyphicon-search"></span>
+            <li>@Html.ActionLink("Friends", "Index", "Home")</li>
 
-    </ul>
-    <div>
+            <span class="glyphicon glyphicon-envelope"></span>
+            <li>@Html.ActionLink("Conversations", "About", "Home")</li>
+
+            <span class="glyphicon glyphicon-camera"></span>
+            <li>@Html.ActionLink("Photos", "Contact", "Home")</li>
+
+            <span class="glyphicon glyphicon-file"></span>
+            <li>@Html.ActionLink("Documents", "Contact", "Home")</li>
+
+            <span class="glyphicon glyphicon-film"></span>
+            <li>@Html.ActionLink("Videos", "Contact", "Home")</li>
+
+        </ul>
+
+
+    <!----------------------------------------------------------------------------------------------------------------------------------->
+
+
+    <div class="container body-content">
         @RenderBody()
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Content/materializeJs")
     @RenderSection("scripts", required: false)
+
 </body>
-</html>
 
