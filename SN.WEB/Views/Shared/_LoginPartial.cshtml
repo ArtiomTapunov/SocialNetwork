@@ -10,11 +10,11 @@
 
         <ul class="right hide-on-med-and-down">
             <li>
-                @Html.ActionLink("Hello, " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                @Html.ActionLink("Settings", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
             </li>
-            <li><a href="javascript:document.getElementById('logoutForm').submit()">Sign out</a></li>
             <li>@Html.ActionLink("Application Info", "About", "Home")</li>
             <li>@Html.ActionLink("Our contacts", "Contact", "Home")</li>
+            <li><a href="javascript:document.getElementById('logoutForm').submit()">Sign out</a></li>
         </ul>
     }
 }

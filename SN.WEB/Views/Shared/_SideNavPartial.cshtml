@@ -8,43 +8,23 @@
         <li>
             <div class="user-view">
                 <div class="background">
-                    <img src="images/office.jpg">
+                    <img src="~/Images/Mexico.jpg">
                 </div>
-                <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-                <a href="#!name"><span class="white-text name">John Doe</span></a>
-                <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+                <img style="margin: auto" class="circle" src="~/Images/Cuba.jpg"/>
+                <p style="text-align: center"><span class="black-text name">@User.Identity.GetUserName()</span></p>
+                <p style="text-align: center"><span class="black-text email"> </span></p>
             </div>
         </li>
-        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-        <li><a href="#!">Second Link</a></li>
         <li><div class="divider"></div></li>
-        <li><a class="subheader">Subheader</a></li>
-        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+        <li style="text-align: center"><span><i class="small material-icons">account_circle</i>@Html.ActionLink(" My profile", "", "", new { area = "", @class = "waves-effect" })</span></li>
+        <li style="text-align: center"><span><i class="small material-icons">person</i>@Html.ActionLink(" Friends", "", "", new { area = "Friends", @class = "waves-effect" })</span></li>
+        <li style="text-align: center"><span><i class="small material-icons">question_answer</i>@Html.ActionLink(" Conversations", "", "", new { area= "", @class = "waves-effect" })</span></li>
+        <li style="text-align: center"><span><i class="small material-icons">local_library</i>@Html.ActionLink(" News", "", "", new { area= "", @class = "waves-effect" })</span></li>
+        <li style="text-align: center"><span><i class="small material-icons">photo_library</i>@Html.ActionLink(" Photos", "", "", new { area = "", @class = "waves-effect" })</span></li>
+        <li style="text-align: center"><span><i class="small material-icons">video_library</i>@Html.ActionLink(" Videos", "", "", new { area = "", @class = "waves-effect" })</span></li>
+        <li style="text-align: center"><span><i class="small material-icons">description</i>@Html.ActionLink(" Documents", "", "", new { area = "", @class = "waves-effect" })</span></li>
+
     </ul>
-    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-
-    @*<ul class="nav nav-pills nav-stacked">
-
-            <span class="glyphicon glyphicon-search"></span>
-            <li>@Html.ActionLink("Friends", "Index", "Home")</li>
-
-            <span class="glyphicon glyphicon-envelope"></span>
-            <li>@Html.ActionLink("Conversations", "About", "Home")</li>
-
-            <span class="glyphicon glyphicon-camera"></span>
-            <li>@Html.ActionLink("Photos", "Contact", "Home")</li>
-
-            <span class="glyphicon glyphicon-file"></span>
-            <li>@Html.ActionLink("Documents", "Contact", "Home")</li>
-
-            <span class="glyphicon glyphicon-film"></span>
-            <li>@Html.ActionLink("Videos", "Contact", "Home")</li>
-
-        </ul>*@
-}
-else
-{
-
 }
 
 <script>
@@ -53,6 +33,6 @@ else
 
           $('.button-collapse').sideNav();
 
-        }); // end of document ready
-      })(jQuery); // end of jQuery name space
+        }); 
+      })(jQuery); 
 </script>
