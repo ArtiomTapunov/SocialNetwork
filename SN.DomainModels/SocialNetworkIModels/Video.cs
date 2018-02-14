@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SN.DomainModels
+namespace SN.DomainModels.SocialNetworkIModels
 {
     public class Video : Document
     {

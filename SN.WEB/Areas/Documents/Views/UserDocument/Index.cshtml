@@ -1,8 +1,18 @@
-﻿
+﻿@model IEnumerable<SN.DomainModels.SocialNetworkIModels.UserDocument>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>UserDocument</h2>
 
+@if(Model != null)
+{
+    foreach(var document in Model)
+    {
+
+    }
+}
+else
+{
+
+}

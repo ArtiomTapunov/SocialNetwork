@@ -6,6 +6,7 @@ using Ninject.Modules;
 using SN.BLL.Interfaces;
 using SN.BLL.Services;
 using SN.DomainModels;
+using SN.DomainModels.SocialNetworkIModels;
 
 namespace SN.WEB.NinjectBindings
 {

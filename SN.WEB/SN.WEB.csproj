@@ -210,7 +210,9 @@
     <Compile Include="Areas\Friends\FriendsAreaRegistration.cs" />
     <Compile Include="Areas\Messages\Controllers\ConversationController.cs" />
     <Compile Include="Areas\Messages\MessagesAreaRegistration.cs" />
+    <Compile Include="Areas\News\Controllers\NewsController.cs" />
     <Compile Include="Areas\News\NewsAreaRegistration.cs" />
+    <Compile Include="Areas\Settings\Controllers\SettingsController.cs" />
     <Compile Include="Areas\Settings\SettingsAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -287,6 +289,7 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Areas\News\Views\News\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -367,11 +370,10 @@
     <Folder Include="Areas\Friends\Views\Shared\" />
     <Folder Include="Areas\Messages\Models\" />
     <Folder Include="Areas\Messages\Views\Shared\" />
-    <Folder Include="Areas\News\Controllers\" />
     <Folder Include="Areas\News\Models\" />
     <Folder Include="Areas\News\Views\Shared\" />
-    <Folder Include="Areas\Settings\Controllers\" />
     <Folder Include="Areas\Settings\Models\" />
+    <Folder Include="Areas\Settings\Views\Settings\" />
     <Folder Include="Areas\Settings\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,6 @@
 ﻿using SN.BLL.Interfaces;
 using SN.DomainModels;
+using SN.DomainModels.SocialNetworkIModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
