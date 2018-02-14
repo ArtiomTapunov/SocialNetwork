@@ -10,5 +10,7 @@ namespace SN.BLL.Interfaces
     public interface IDocumentService<T> where T : Document
     {
         IEnumerable<T> GetAllDocuments();
+
+        //void Upload(T document);
     }
 }

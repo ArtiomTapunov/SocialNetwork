@@ -5,6 +5,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using SN.DomainModels;
 using System.Configuration;
+using SN.DomainModels.SocialNetworkIModels;
 
 namespace SN.DAL.EF
 {
@@ -55,6 +56,8 @@ namespace SN.DAL.EF
         //public DbSet<Photo> Photos { get; set; }
 
         //public DbSet<Post> Posts { get; set; }
+
+        //public DbSet<Album> Albums { get; set; }
     }
 }
 

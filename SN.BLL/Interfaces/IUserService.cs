@@ -18,9 +18,5 @@ namespace SN.BLL.Interfaces
 
         ICollection<ApplicationUser> GetAllFriends(string id);
 
-
-
-
-        //Business logic abstract for users
     }
 }

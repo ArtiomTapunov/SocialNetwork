@@ -12,6 +12,5 @@ namespace SN.BLL.Services
             Database = uow;
         }
 
-        //Business logic for messages
     }
 }
