@@ -22,8 +22,9 @@ namespace SN.WEB.Controllers
         private ApplicationUserManager _userManager;
         private IUserService userService;
 
-        public AccountController()
+        public AccountController(IUserService userService)
         {
+            this.userService = userService;
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager, IUserService userService )
@@ -113,6 +114,9 @@ namespace SN.WEB.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
+            var user = new ApplicationUser();
+            user = UserManager.FindByEmail(model.UserName);
+
             if (!ModelState.IsValid)
             {
                 return View(model);
@@ -122,16 +126,15 @@ namespace SN.WEB.Controllers
             // To enable password failures to trigger account lockout, change to shouldLockout: true
             //var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
             SignInStatus result;
-            if (model.UserName.Contains("@"))
-            {
-                var user = UserManager.FindByEmail(model.UserName);
+            if (model.UserName.Contains("@"))         
                 result = await SignInManager.PasswordSignInAsync(user.UserName, model.Password, model.RememberMe, shouldLockout: false);
-            }
             else
                 result = await SignInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
                 case SignInStatus.Success:
+                    user.IsOnline = true;
+                    UserManager.Update(user);
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
@@ -442,9 +445,14 @@ namespace SN.WEB.Controllers
         // POST: /Account/LogOff
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult LogOff()
+        public ActionResult LogOff(string id)
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+
+            var user = UserManager.FindById(id);
+            user.IsOnline = false;
+            UserManager.Update(user);
+
             return RedirectToAction("Index", "Home");
         }
 

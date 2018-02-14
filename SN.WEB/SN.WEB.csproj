@@ -201,8 +201,11 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Documents\DocumentsAreaRegistration.cs" />
     <Compile Include="Areas\Friends\Controllers\FriendController.cs" />
     <Compile Include="Areas\Friends\FriendsAreaRegistration.cs" />
+    <Compile Include="Areas\Messages\MessagesAreaRegistration.cs" />
+    <Compile Include="Areas\Settings\SettingsAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -246,6 +249,10 @@
     <Content Include="Content\fonts\roboto\Roboto-Thin.woff" />
     <Content Include="Content\fonts\roboto\Roboto-Thin.woff2" />
     <Content Include="Areas\Friends\Views\web.config" />
+    <Content Include="Areas\Friends\Views\Friend\Index.cshtml" />
+    <Content Include="Areas\Messages\Views\web.config" />
+    <Content Include="Areas\Settings\Views\web.config" />
+    <Content Include="Areas\Documents\Views\web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -298,10 +305,17 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Documents\Controllers\" />
+    <Folder Include="Areas\Documents\Models\" />
+    <Folder Include="Areas\Documents\Views\Shared\" />
     <Folder Include="Areas\Friends\Models\" />
-    <Folder Include="Areas\Friends\Views\Friend\" />
     <Folder Include="Areas\Friends\Views\Shared\" />
-    <Folder Include="Scripts\NewFolder1\" />
+    <Folder Include="Areas\Messages\Controllers\" />
+    <Folder Include="Areas\Messages\Models\" />
+    <Folder Include="Areas\Messages\Views\Shared\" />
+    <Folder Include="Areas\Settings\Controllers\" />
+    <Folder Include="Areas\Settings\Models\" />
+    <Folder Include="Areas\Settings\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

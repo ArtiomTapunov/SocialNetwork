@@ -27,12 +27,12 @@ namespace SN.BLL.Services
 
         public IEnumerable<ApplicationUser> GetAllFriends()
         {
-            throw new NotImplementedException();
+            return null;
         }
 
         public IEnumerable<ApplicationUser> GetAllUsers()
         {
-            return Database.Users.GetAll();
+            return null;
         }
 
         public void RemoveFriend(int id)

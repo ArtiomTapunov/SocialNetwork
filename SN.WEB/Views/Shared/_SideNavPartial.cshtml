@@ -7,8 +7,8 @@
     <ul id="slide-out" class="side-nav fixed">
         <li>
             <div class="user-view">
-                <div class="background">
-                    <img src="~/Images/Mexico.jpg">
+                <div class="background red lighten-3">
+                    @*<img src="~/Images/Mexico.jpg">*@
                 </div>
                 <img style="margin: auto" class="circle" src="~/Images/Cuba.jpg"/>
                 <p style="text-align: center"><span class="black-text name">@User.Identity.GetUserName()</span></p>
@@ -16,13 +16,13 @@
             </div>
         </li>
         <li><div class="divider"></div></li>
-        <li style="text-align: center"><span><i class="small material-icons">account_circle</i>@Html.ActionLink(" My profile", "", "", new { area = "", @class = "waves-effect" })</span></li>
-        <li style="text-align: center"><span><i class="small material-icons">person</i>@Html.ActionLink(" Friends", "", "", new { area = "Friends", @class = "waves-effect" })</span></li>
-        <li style="text-align: center"><span><i class="small material-icons">question_answer</i>@Html.ActionLink(" Conversations", "", "", new { area= "", @class = "waves-effect" })</span></li>
-        <li style="text-align: center"><span><i class="small material-icons">local_library</i>@Html.ActionLink(" News", "", "", new { area= "", @class = "waves-effect" })</span></li>
-        <li style="text-align: center"><span><i class="small material-icons">photo_library</i>@Html.ActionLink(" Photos", "", "", new { area = "", @class = "waves-effect" })</span></li>
-        <li style="text-align: center"><span><i class="small material-icons">video_library</i>@Html.ActionLink(" Videos", "", "", new { area = "", @class = "waves-effect" })</span></li>
-        <li style="text-align: center"><span><i class="small material-icons">description</i>@Html.ActionLink(" Documents", "", "", new { area = "", @class = "waves-effect" })</span></li>
+        <li><span><i class="small material-icons">account_circle</i>@Html.ActionLink(" My profile", "", "", new { area = "", @class = "waves-effect" })</span></li>
+        <li ><span><i class="small material-icons">person</i>@Html.ActionLink(" Friends", "Index", "Friend", new { area = "Friends", @class = "waves-effect" })</span></li>
+        <li ><span><i class="small material-icons">question_answer</i>@Html.ActionLink(" Conversations", "", "", new { area= "Messages", @class = "waves-effect" })</span></li>
+        <li ><span><i class="small material-icons">local_library</i>@Html.ActionLink(" News", "", "", new { area= "", @class = "waves-effect" })</span></li>
+        <li ><span><i class="small material-icons">photo_library</i>@Html.ActionLink(" Photos", "", "", new { area = "Documents", @class = "waves-effect" })</span></li>
+        <li><span><i class="small material-icons">video_library</i>@Html.ActionLink(" Videos", "", "", new { area = "Documents", @class = "waves-effect" })</span></li>
+        <li ><span><i class="small material-icons">description</i>@Html.ActionLink(" Documents", "", "", new { area = "Documents", @class = "waves-effect" })</span></li>
 
     </ul>
 }
