@@ -25,9 +25,10 @@ namespace SN.BLL.Services
             throw new NotImplementedException();
         }
 
-        public IEnumerable<ApplicationUser> GetAllFriends()
+        public ICollection<ApplicationUser> GetAllFriends(string id)
         {
-            return null;
+            var user = Database.Users.Get(id);
+            return user.Friends;
         }
 
         public IEnumerable<ApplicationUser> GetAllUsers()

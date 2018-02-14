@@ -17,12 +17,12 @@
         </li>
         <li><div class="divider"></div></li>
         <li><span><i class="small material-icons">account_circle</i>@Html.ActionLink(" My profile", "", "", new { area = "", @class = "waves-effect" }, null)</span></li>
-        <li ><span><i class="small material-icons">person</i>@Html.ActionLink(" Friends", "Index", "Friend", new { area = "Friends", @class = "waves-effect" }, null)</span></li>
-        <li ><span><i class="small material-icons">question_answer</i>@Html.ActionLink(" Conversations", "", "", new { area= "Messages", @class = "waves-effect" }, null)</span></li>
+        <li ><span><i class="small material-icons">person</i>@Html.ActionLink(" Friends", "Index", "Friend", new { area = "Friends", id = User.Identity.GetUserId().ToString(), @class = "waves-effect" }, null)</span></li>
+        <li ><span><i class="small material-icons">question_answer</i>@Html.ActionLink(" Conversations", "Index", "Conversation", new { area= "Messages", @class = "waves-effect" }, null)</span></li>
         <li ><span><i class="small material-icons">local_library</i>@Html.ActionLink(" News", "", "", new { area= "", @class = "waves-effect" }, null)</span></li>
-        <li ><span><i class="small material-icons">photo_library</i>@Html.ActionLink(" Photos", "", "", new { area = "Documents", @class = "waves-effect" }, null)</span></li>
-        <li><span><i class="small material-icons">video_library</i>@Html.ActionLink(" Videos", "", "", new { area = "Documents", @class = "waves-effect" }, null)</span></li>
-        <li ><span><i class="small material-icons">description</i>@Html.ActionLink(" Documents", "", "", new { area = "Documents", @class = "waves-effect" }, null)</span></li>
+        <li ><span><i class="small material-icons">photo_library</i>@Html.ActionLink(" Photos", "Index", "Photo", new { area = "Documents", @class = "waves-effect" }, null)</span></li>
+        <li><span><i class="small material-icons">video_library</i>@Html.ActionLink(" Videos", "Index", "Video", new { area = "Documents", @class = "waves-effect" }, null)</span></li>
+        <li ><span><i class="small material-icons">description</i>@Html.ActionLink(" Documents", "Index", "UserDocument", new { area = "Documents", @class = "waves-effect" }, null)</span></li>
 
     </ul>
 }

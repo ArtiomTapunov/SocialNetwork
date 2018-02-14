@@ -19,9 +19,9 @@ namespace SN.WEB.Areas.Friends.Controllers
 
 
         // GET: Friends/Friend
-        public ActionResult Index()
+        public ActionResult Index(string id)
         {
-            return View(_userService.GetAllFriends());
+            return View(_userService.GetAllFriends(id));
         }
     }
 }

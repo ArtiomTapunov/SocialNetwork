@@ -3,41 +3,54 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div ng-app="">
+    <nav style="width: 80%;">
+        <div class="nav-wrapper">
+            <form>
+                <div class="input-field">
+                    <input ng-model="name" placeholder="Search friends" id="search" type="search" required>
+                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                    <i class="material-icons">close</i>
+                </div>
+            </form>
+        </div>
+    </nav>
 
-<nav style="width: 80%;">
-    <div class="nav-wrapper">
-        <form>
-            <div class="input-field">
-                <input placeholder="Search friends" id="search" type="search" required>
-                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                <i class="material-icons">close</i>
-            </div>
-        </form>
-    </div>
-</nav>
 
-@if (Model != null)
-{
-    <ul class="collection">
+    @if (Model != null)
+    {
+        <ul class="collection">
 
-        @foreach (var friend in Model)
-        {
-            <li class="collection-item avatar">
-                <img src="images/yuna.jpg" alt="Avatar" class="circle">
-                <span class="title">@friend.UserName</span>
-                @if(friend.IsOnline)
-                {
-                    <i class="material-icons">wifi</i>
-                }
-                <p>
-                    @friend.Email <br>
-                    Second Line
-                </p>
+            @foreach (var friend in Model)
+            {
+                <li class="collection-item avatar">
+                    <img src="images/yuna.jpg" alt="Avatar" class="circle">
+                    <span class="title">@friend.UserName</span>
+                    @if (friend.IsOnline)
+                    {
+                        <i class="material-icons">wifi</i>
+                    }
+                    <p>
+                        @friend.Email <br>
+                        Second Line
+                    </p>
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p> You don't have friends</p>
+    }
+
+
+
+    @*<div>
+        <ul class="collection">
+            <li ng-repeat=" var user in @ViewBag.AllUsers" class="collection-item avatar">
+                {{1 + 1}}
             </li>
-        }
-    </ul>
-}
-else
-{
-    <p> You don't have friends</p>
-}
+        </ul>
+    </div>*@
+
+</div>

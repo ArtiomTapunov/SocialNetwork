@@ -23,6 +23,9 @@ namespace SN.WEB
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+              "~/Scripts/angular.js"));
+
             bundles.Add(new ScriptBundle("~/Content/materializeJs").Include(
                       "~/Content/js/materialize.min.js"));                   
 

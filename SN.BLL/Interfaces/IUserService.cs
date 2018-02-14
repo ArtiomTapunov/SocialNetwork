@@ -16,7 +16,7 @@ namespace SN.BLL.Interfaces
 
         void RemoveFriend(int id);
 
-        IEnumerable<ApplicationUser> GetAllFriends();
+        ICollection<ApplicationUser> GetAllFriends(string id);
 
 
 

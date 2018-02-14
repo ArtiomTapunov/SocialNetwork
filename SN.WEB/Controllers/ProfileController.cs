@@ -27,10 +27,6 @@ namespace SN.WEB.Controllers
         private readonly IDocumentService<UserDocument> documentService;
 
         // GET: Profile
-        public ActionResult Friends()
-        {
-            return View(userService.GetAllFriends());
-        }
 
         public ActionResult Photos()
         {
