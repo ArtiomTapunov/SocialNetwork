@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstratClasses\Document.cs" />
+    <Compile Include="SocialNetworkIModels\Album.cs" />
     <Compile Include="SocialNetworkIModels\ApplicationUser.cs" />
     <Compile Include="SocialNetworkIModels\Like.cs" />
     <Compile Include="SocialNetworkIModels\Message.cs" />
