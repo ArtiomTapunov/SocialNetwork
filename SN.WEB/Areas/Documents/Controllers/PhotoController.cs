@@ -1,5 +1,6 @@
 ﻿using SN.BLL.Interfaces;
 using SN.DomainModels;
+using SN.DomainModels.SocialNetworkIModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace SN.WEB.Areas.Documents.Controllers
         // GET: Documents/Photo
         public ActionResult Index()
         {
-            return View();
+            return View(photoService.GetAllDocuments());
         }
     }
 }

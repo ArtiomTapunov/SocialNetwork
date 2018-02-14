@@ -8,18 +8,18 @@ namespace SN.DomainModels.Abstract_classes
 {
     public abstract class Document
     {
-        protected int Id { get; set; }
+        public int Id { get; set; }
 
-        protected string Title { get; set; }
+        public string Title { get; set; }
 
-        protected string Description { get; set; }
+        public string Description { get; set; }
 
-        protected DateTime UploadDate { get; set; }
+        public DateTime UploadDate { get; set; }
 
-        protected ICollection<Like> Likes { get; set; }
+        public ICollection<Like> Likes { get; set; }
 
-        protected int LookAmount { get; set; }
+        public int LookAmount { get; set; }
 
-        protected byte[] Content { get; set; }
+        public byte[] Content { get; set; }
     }
 }

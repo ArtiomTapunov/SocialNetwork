@@ -57,6 +57,8 @@ namespace SN.DAL.EF
 
         //public DbSet<Post> Posts { get; set; }
 
+        //public DbSet<UserDocument> UserDocuments { get; set; }
+
         //public DbSet<Album> Albums { get; set; }
     }
 }
