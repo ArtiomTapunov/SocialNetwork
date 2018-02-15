@@ -260,6 +260,7 @@
     <Content Include="Areas\Messages\Views\web.config" />
     <Content Include="Areas\Settings\Views\web.config" />
     <Content Include="Areas\Documents\Views\web.config" />
+    <Content Include="Images\ProfileRoomImage.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
