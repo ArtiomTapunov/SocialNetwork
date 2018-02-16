@@ -60,6 +60,8 @@ namespace SN.DAL.EF
         //public DbSet<UserDocument> UserDocuments { get; set; }
 
         //public DbSet<Album> Albums { get; set; }
+
+        //public DbSet<Settings> Settings { get; set; }
     }
 }
 
