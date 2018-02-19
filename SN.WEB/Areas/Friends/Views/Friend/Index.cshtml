@@ -3,7 +3,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div ng-app="">
+<div>
     <nav style="width: 80%;">
         <div class="nav-wrapper">
             <form>
@@ -34,6 +34,9 @@
                         @friend.Email <br>
                         Second Line
                     </p>
+                    <div id="removeButton">
+                        @Html.ActionLink("Remove from friends", "RemoveFriend", "Friend", new { area = "Friends", userId = ViewBag.UserId, id = friend.Id.ToString(), @class = "waves-effect waves-light btn-warning" }, null)
+                    </div>
                 </li>
             }
         </ul>
@@ -41,8 +44,34 @@
     else
     {
         <p> You don't have friends</p>
+        <br/>
     }
 
 
+    <ul class="collection">
+        @foreach (var user in ViewBag.Others)
+        {
+            <li class="collection-item avatar">
+                <img src="images/yuna.jpg" alt="Avatar" class="circle">
+                <span class="title">@user.UserName</span>
+                @if (user.IsOnline)
+                {
+                    <i class="material-icons">wifi</i>
+                }
+                <p>
+                    @user.Email <br>
+                    Second Line
+                </p>
+                <div id="addButton">
+                    @Html.ActionLink("Add to friends", "AddToFriends", "Friend", new {  area = "Friends", userId = ViewBag.UserId, id = user.Id , @class = "waves-effect waves-light btn-large" }, null)
+                </div>
+            </li>
+        }
+    </ul>
 
 </div>
+
+
+<script>
+
+</script>

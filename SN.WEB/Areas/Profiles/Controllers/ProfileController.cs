@@ -8,11 +8,16 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace SN.WEB.Controllers
+namespace SN.WEB.Areas.Profiles
 {
     public class ProfileController : Controller
     {
 
+
+        public ProfileController()
+        {
+
+        }
 
         // GET: Profile
 

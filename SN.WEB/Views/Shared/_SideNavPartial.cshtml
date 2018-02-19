@@ -46,6 +46,10 @@
     <li class="tabs"><a class="waves-effect" href="/Documents/UserDocument/Index"><i class="material-icons">description</i>Documents</a></li>
     <li><div class="divider"></div></li>
     <li><a class="waves-effect" href="#!"><i class="material-icons">build</i>Support</a></li>
+
+
+    @Html.ActionLink(" Documents", "Index", "UserDocument", new { area = "Documents", @class = "waves-effect" }, null)
+    @Html.ActionLink(" Friends", "Index", "Friend", new { area = "Friends", id = User.Identity.GetUserId().ToString(), @class = "waves-effect" }, null)
 </ul>
     <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 }

@@ -20,9 +20,12 @@ namespace SN.BLL.Services
             Database = uow;
         }
 
-        public void AddFriend(ApplicationUser user)
+        public void AddFriend(string id, string friend_id)
         {
-            throw new NotImplementedException();
+            var user = Database.Users.Get(id);
+            var friend = Database.Users.Get(friend_id);
+            friend.Friends.Add(user);
+            user.Friends.Add(friend);
         }
 
         public ICollection<ApplicationUser> GetAllFriends(string id)
@@ -36,11 +39,13 @@ namespace SN.BLL.Services
             return null;
         }
 
-        public void RemoveFriend(int id)
+        public void RemoveFriend(string user_id, string friend_id)
         {
-            throw new NotImplementedException();
+            var user = Database.Users.Get(user_id);
+            var friend = Database.Users.Get(friend_id);
+            user.Friends.Remove(friend);
+            friend.Friends.Remove(user);
         }
 
-        //Realization business logic for users
     }
 }

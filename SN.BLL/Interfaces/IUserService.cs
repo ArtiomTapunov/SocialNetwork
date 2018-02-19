@@ -12,9 +12,9 @@ namespace SN.BLL.Interfaces
     {
         IEnumerable<ApplicationUser> GetAllUsers();
 
-        void AddFriend(ApplicationUser user);
+        void AddFriend(string user_id, string friend_id);
 
-        void RemoveFriend(int id);
+        void RemoveFriend(string user_id, string friend_id);
 
         ICollection<ApplicationUser> GetAllFriends(string id);
 
