@@ -9,9 +9,8 @@
         @Html.AntiForgeryToken()
 
         <ul class="right hide-on-med-and-down">
-            <li>
-                @Html.ActionLink("Hello, " + User.Identity.Name, "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-            </li>
+            <li><a data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a></li>
+            <li>@Html.ActionLink("Hello, " + User.Identity.Name, "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })</li>
             <li>@Html.ActionLink("Application Info", "About", "Home")</li>
             <li>@Html.ActionLink("Our contacts", "Contact", "Home")</li>
             <li><a href="javascript:document.getElementById('logoutForm').submit()">Sign out</a></li>
