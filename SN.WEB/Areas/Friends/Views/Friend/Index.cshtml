@@ -35,7 +35,7 @@
                         Second Line
                     </p>
                     <div id="removeButton">
-                        @Html.ActionLink("Remove from friends", "RemoveFriend", "Friend", new { area = "Friends", userId = ViewBag.UserId, id = friend.Id.ToString(), @class = "waves-effect waves-light btn-warning" }, null)
+                        @Html.ActionLink("Remove from friends", "RemoveFriend", "Friend", new { area = "Friends", userId = ViewBag.UserId, id = friend.Id.ToString(), @class = "waves-effect waves-light btn-large" }, null)
                     </div>
                 </li>
             }
@@ -47,6 +47,7 @@
         <br/>
     }
 
+        <div class="divider"></div>
 
     <ul class="collection">
         @foreach (var user in ViewBag.Others)
