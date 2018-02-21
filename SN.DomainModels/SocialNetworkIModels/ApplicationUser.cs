@@ -16,6 +16,12 @@ namespace SN.DomainModels
 
         public ICollection<ApplicationUser> Friends { get; set; }
 
+        //public ICollection<Photo> Photos { get; set; }
+
+        //public ICollection<Video> Videos { get; set; }
+
+        //public ICollection<UserDocument> UserDocuments { get; set; }
+
         //public Settings Settings { get; set; }
 
 
