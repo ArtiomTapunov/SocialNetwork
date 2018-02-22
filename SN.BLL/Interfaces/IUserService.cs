@@ -18,5 +18,8 @@ namespace SN.BLL.Interfaces
 
         ICollection<ApplicationUser> GetAllFriends(string id);
 
+        ICollection<ApplicationUser> GetNotFriends(string id);
+
+        ApplicationUser GetUser(string id);
     }
 }

@@ -1,0 +1,35 @@
+﻿@using Microsoft.AspNet.Identity
+
+
+
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", new { area = "", id = User.Identity.GetUserId().ToString() }, FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <ul class="right hide-on-med-and-down">
+<<<<<<< HEAD
+            <li>
+                @Html.ActionLink("Hello, " + User.Identity.Name, "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+            </li>
+=======
+            <li><a data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a></li>
+            <li>@Html.ActionLink("Hello, " + User.Identity.Name, "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })</li>
+>>>>>>> WorkingDevBranch
+            <li>@Html.ActionLink("Application Info", "About", "Home")</li>
+            <li>@Html.ActionLink("Our contacts", "Contact", "Home")</li>
+            <li><a href="javascript:document.getElementById('logoutForm').submit()">Sign out</a></li>
+        </ul>
+    }
+}
+else
+{
+    <ul class="right hide-on-med-and-down">
+        <li>@Html.ActionLink("Sign UP", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Sign In", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        <li>@Html.ActionLink("Application Info", "About", "Home")</li>
+        <li>@Html.ActionLink("Our contacts", "Contact", "Home")</li>
+    </ul>
+}
+
