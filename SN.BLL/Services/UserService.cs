@@ -6,7 +6,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace SN.BLL.Services
 {
@@ -14,6 +15,7 @@ namespace SN.BLL.Services
     {
         
         private readonly IUnitOfWork Database;
+        private readonly ApplicationUser user;
 
         public UserService(IUnitOfWork uow)
         {
@@ -24,19 +26,72 @@ namespace SN.BLL.Services
         {
             var user = Database.Users.Get(id);
             var friend = Database.Users.Get(friend_id);
-            friend.Friends.Add(user);
-            user.Friends.Add(friend);
+
+            if (user.Friends == null)
+            {
+                user.Friends = new List<ApplicationUser>();
+                friend.Friends = new List<ApplicationUser>();
+
+                user.Friends.Add(friend);
+                friend.Friends.Add(user);
+            }
+            else
+            {              
+                user.Friends.Add(friend);
+                friend.Friends.Add(user);
+            }
+
+            Database.Users.Update(user);
+            Database.Users.Update(friend);
         }
 
         public ICollection<ApplicationUser> GetAllFriends(string id)
         {
             var user = Database.Users.Get(id);
+
+            if (user.Friends == null)
+                user.Friends = new List<ApplicationUser>();
+
             return user.Friends;
+        }
+
+        public ICollection<ApplicationUser> GetNotFriends(string id)
+        {
+            var friends = GetAllFriends(id);
+            var others = new List<ApplicationUser>();
+
+            if (GetAllFriends(id).Count != 0)
+            {
+                //foreach (var user in GetAllUsers())
+                //{
+                //    foreach (var temp in friends)
+                //    {
+                //        if (user.Id != temp.Id && user.Id != id)
+                //        {
+                //            others.Add(user);
+                //        }
+                //    }
+                //}
+
+                others = GetAllUsers().ToList().Except(GetAllFriends(id)).ToList<ApplicationUser>();
+            }
+            else
+            {
+                others = Database.Users.GetAll().ToList<ApplicationUser>();
+                others.Remove(GetUser(id));
+            }
+
+            return others;
+        }
+
+        public ApplicationUser GetUser(string id)
+        {
+            return Database.Users.Get(id);
         }
 
         public IEnumerable<ApplicationUser> GetAllUsers()
         {
-            return null;
+            return Database.Users.GetAll();
         }
 
         public void RemoveFriend(string user_id, string friend_id)
