@@ -73,7 +73,7 @@ namespace SN.BLL.Services
                 //    }
                 //}
 
-                others = GetAllUsers().ToList().Except(GetAllFriends(id)).ToList<ApplicationUser>();
+                others = GetAllUsers().ToList().Except(friends).ToList<ApplicationUser>();
             }
             else
             {
