@@ -33,12 +33,19 @@
             <p>
                 @friend.Email <br>
             </p>
+
             <div id="removeButton">
                 @Html.ActionLink("Remove from friends", "RemoveFriend", "Friend", new { area = "Friends", userId = ViewBag.UserId, id = friend.Id.ToString(), @class = "waves-effect waves-light btn-large" }, null)
             </div>
+
+
             <a class="btn-floating yellow darken-1" title="Write message"><i class="material-icons">mode_edit</i></a>
-            <a class="btn-floating red" title="Remove from friends"><i class="material-icons">remove</i></a>
-        </li>
+
+            <a class="btn-floating red" title="Remove from friends" href="@Url.Action("RemoveFriend", "Friend", new { area = "Friends", userId = ViewBag.UserId, id = friend.Id.ToString(), @class = "waves-effect waves-light btn-large" }, null)">
+                <i class="material-icons">remove</i>
+            </a>
+
+            </li>
 
 
 
@@ -63,7 +70,7 @@
                 <span class="title">@user.UserName</span>
                 @if (user.IsOnline)
     {
-                    <i title="Online" class="material-icons">wifi</i>
+            <i title="Online" class="material-icons">wifi</i>
 }
                 <p>
                     @user.Email <br>
@@ -73,8 +80,10 @@
                 </div>
 
                 <a class="btn-floating yellow darken-1" title="Write message"><i class="material-icons">mode_edit</i></a>
-                <a class="btn-floating green" title="Add to friends"><i class="material-icons">add</i></a>
 
+                <a class="btn-floating green" title="Add to friends" href="@Url.Action("AddToFriends", "Friend", new { area = "Friends", userId = ViewBag.UserId, id = user.Id.ToString(), @class = "waves-effect waves-light btn-large" }, null)">
+                    <i class="material-icons">add</i>
+                </a>
 
             </li>
 
@@ -83,8 +92,3 @@
         </ul>
 
 </div>
-
-
-<script>
-
-</script>
