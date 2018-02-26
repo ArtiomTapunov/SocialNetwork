@@ -19,27 +19,32 @@
 
     @if (Model != null)
     {
-        <ul class="collection">
+    <ul class="collection">
 
-            @foreach (var friend in Model)
-            {
-                <li class="collection-item avatar">
-                    <img src="images/yuna.jpg" alt="Avatar" class="circle">
-                    <span class="title">@friend.UserName</span>
-                    @if (friend.IsOnline)
-                    {
-                        <i class="material-icons">wifi</i>
-                    }
-                    <p>
-                        @friend.Email <br>
-                        Second Line
-                    </p>
-                    <div id="removeButton">
-                        @Html.ActionLink("Remove from friends", "RemoveFriend", "Friend", new { area = "Friends", userId = ViewBag.UserId, id = friend.Id.ToString(), @class = "waves-effect waves-light btn-large" }, null)
-                    </div>
-                </li>
-            }
-        </ul>
+        @foreach (var friend in Model)
+                {
+        <li class="collection-item avatar">
+            <img src="images/yuna.jpg" alt="Avatar" class="circle">
+            <span class="title">@friend.UserName</span>
+            @if (friend.IsOnline)
+    {
+        <i class="material-icons">wifi</i>
+}
+            <p>
+                @friend.Email <br>
+            </p>
+            <div id="removeButton">
+                @Html.ActionLink("Remove from friends", "RemoveFriend", "Friend", new { area = "Friends", userId = ViewBag.UserId, id = friend.Id.ToString(), @class = "waves-effect waves-light btn-large" }, null)
+            </div>
+            <a class="btn-floating yellow darken-1" title="Write message"><i class="material-icons">mode_edit</i></a>
+            <a class="btn-floating red" title="Remove from friends"><i class="material-icons">remove</i></a>
+        </li>
+
+
+
+
+}
+    </ul>
     }
     else
     {
@@ -48,27 +53,34 @@
     }
 
         <div class="divider"></div>
+         <br/>
 
-    <ul class="collection">
-        @foreach (var user in ViewBag.Others)
-        {
+        <ul class="collection">
+            @foreach (var user in ViewBag.Others)
+                    {
             <li class="collection-item avatar">
                 <img src="images/yuna.jpg" alt="Avatar" class="circle">
                 <span class="title">@user.UserName</span>
                 @if (user.IsOnline)
-                {
-                    <i class="material-icons">wifi</i>
-                }
+    {
+                    <i title="Online" class="material-icons">wifi</i>
+}
                 <p>
                     @user.Email <br>
-                    Second Line
                 </p>
                 <div id="addButton">
-                    @Html.ActionLink("Add to friends", "AddToFriends", "Friend", new {  area = "Friends", userId = ViewBag.UserId, id = user.Id , @class = "waves-effect waves-light btn-large" }, null)
+                    @Html.ActionLink("Add to friends", "AddToFriends", "Friend", new { area = "Friends", userId = ViewBag.UserId, id = user.Id, @class = "waves-effect waves-light btn-large" }, null)
                 </div>
+
+                <a class="btn-floating yellow darken-1" title="Write message"><i class="material-icons">mode_edit</i></a>
+                <a class="btn-floating green" title="Add to friends"><i class="material-icons">add</i></a>
+
+
             </li>
-        }
-    </ul>
+
+
+                }
+        </ul>
 
 </div>
 
