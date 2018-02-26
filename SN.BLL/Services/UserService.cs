@@ -74,7 +74,8 @@ namespace SN.BLL.Services
                 //    }
                 //}
 
-                others = GetAllUsers().ToList().Except(friends).ToList();
+                others = GetAllUsers().Except(friends).ToList();
+                others.Remove(GetUser(id));
             }
             else
             {
@@ -99,8 +100,14 @@ namespace SN.BLL.Services
         {
             var user = Database.Users.Get(user_id);
             var friend = Database.Users.Get(friend_id);
-            user.Friends.Remove(friend);
-            friend.Friends.Remove(user);
+
+            if (user.Friends != null)
+                user.Friends.Remove(friend);
+
+            if (friend.Friends != null)
+                friend.Friends.Remove(user);
+
+            Database.Save();
         }
 
     }

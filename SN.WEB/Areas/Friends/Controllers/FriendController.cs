@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Routing;
 
 namespace SN.WEB.Areas.Friends.Controllers
 {
@@ -18,9 +19,16 @@ namespace SN.WEB.Areas.Friends.Controllers
             _userService = userService;
         }
 
-        public void RemoveFriend(string userId, string id)
+        public ActionResult RemoveFriend(string userId, string id)
         {
             _userService.RemoveFriend(userId, id);
+
+            var friends = _userService.GetAllFriends(userId);
+            var others = _userService.GetNotFriends(userId);
+
+            ViewBag.UserId = id;
+            ViewBag.Others = others;
+            return RedirectToAction("Index", new { id = userId });
         }
 
 
@@ -33,7 +41,7 @@ namespace SN.WEB.Areas.Friends.Controllers
 
             ViewBag.UserId = id;
             ViewBag.Others = others;
-            return RedirectToAction("Index", new { friends });
+            return RedirectToAction("Index", new { id = userId });
         }
 
 
