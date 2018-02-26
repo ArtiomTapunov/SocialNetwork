@@ -69,6 +69,10 @@ namespace SN.WEB.Models
         public string UserName { get; set; }
 
         [Required]
+        [Display(Name = "Language")]
+        public string Language{ get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }

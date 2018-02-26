@@ -8,8 +8,10 @@ namespace SN.DomainModels.Enums
 {
     public enum Languages
     {
-        ENGLISH,
+        English,
 
-        РУССКИЙ
+        Русский,
+
+        Español
     }
 }
