@@ -11,6 +11,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using SN.BLL.Interfaces;
 using SN.DomainModels;
+using SN.DomainModels.Enums;
 using SN.WEB.Models;
 
 namespace SN.WEB.Controllers
@@ -200,6 +201,7 @@ namespace SN.WEB.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+            //ViewBag.Languages = Languages;
             return View();
         }
 
