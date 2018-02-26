@@ -43,6 +43,7 @@ namespace SN.BLL.Services
 
             Database.Users.Update(user);
             Database.Users.Update(friend);
+            Database.Save();
         }
 
         public ICollection<ApplicationUser> GetAllFriends(string id)
@@ -60,7 +61,7 @@ namespace SN.BLL.Services
             var friends = GetAllFriends(id);
             var others = new List<ApplicationUser>();
 
-            if (GetAllFriends(id).Count != 0)
+            if (friends.Count != 0)
             {
                 //foreach (var user in GetAllUsers())
                 //{
