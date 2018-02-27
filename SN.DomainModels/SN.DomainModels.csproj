@@ -54,14 +54,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstratClasses\Document.cs" />
+    <Compile Include="AbstratClasses\Group.cs" />
     <Compile Include="Enums\Languages.cs" />
     <Compile Include="Enums\Themes.cs" />
     <Compile Include="SocialNetworkIModels\Album.cs" />
     <Compile Include="SocialNetworkIModels\ApplicationUser.cs" />
+    <Compile Include="SocialNetworkIModels\Community.cs" />
+    <Compile Include="SocialNetworkIModels\GroupChat.cs" />
     <Compile Include="SocialNetworkIModels\Like.cs" />
     <Compile Include="SocialNetworkIModels\Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SocialNetworkIModels\Photo.cs" />
+    <Compile Include="SocialNetworkIModels\Post.cs" />
     <Compile Include="SocialNetworkIModels\Settings.cs" />
     <Compile Include="SocialNetworkIModels\UserDocument.cs" />
     <Compile Include="SocialNetworkIModels\Video.cs" />
