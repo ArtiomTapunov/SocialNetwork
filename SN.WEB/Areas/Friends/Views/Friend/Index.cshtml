@@ -3,7 +3,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div ng-app="">
+<div>
     <nav style="width: 80%;">
         <div class="nav-wrapper">
             <form>
@@ -17,32 +17,78 @@
     </nav>
 
 
-    @if (Model != null)
+    @if (Model.Count != 0)
     {
-        <ul class="collection">
+    <ul class="collection">
 
-            @foreach (var friend in Model)
-            {
-                <li class="collection-item avatar">
-                    <img src="images/yuna.jpg" alt="Avatar" class="circle">
-                    <span class="title">@friend.UserName</span>
-                    @if (friend.IsOnline)
-                    {
-                        <i class="material-icons">wifi</i>
-                    }
-                    <p>
-                        @friend.Email <br>
-                        Second Line
-                    </p>
-                </li>
-            }
-        </ul>
+        @foreach (var friend in Model)
+                {
+        <li class="collection-item avatar">
+            <img src="images/yuna.jpg" alt="Avatar" class="circle">
+            <span class="title">@friend.UserName</span>
+            @if (friend.IsOnline)
+    {
+        <i class="material-icons">wifi</i>
+}
+            <p>
+                @friend.Email <br>
+            </p>
+
+            <div id="removeButton">
+                @Html.ActionLink("Remove from friends", "RemoveFriend", "Friend", new { area = "Friends", userId = ViewBag.UserId, id = friend.Id.ToString(), @class = "waves-effect waves-light btn-large" }, null)
+            </div>
+
+
+            <a class="btn-floating yellow darken-1" title="Write message"><i class="material-icons">mode_edit</i></a>
+
+            <a class="btn-floating red" title="Remove from friends" href="@Url.Action("RemoveFriend", "Friend", new { area = "Friends", userId = ViewBag.UserId, id = friend.Id.ToString(), @class = "waves-effect waves-light btn-large" }, null)">
+                <i class="material-icons">remove</i>
+            </a>
+
+            </li>
+
+
+
+
+}
+    </ul>
     }
     else
     {
         <p> You don't have friends</p>
+        <br/>
     }
 
+        <div class="divider"></div>
+         <br/>
 
+        <ul class="collection">
+            @foreach (var user in ViewBag.Others)
+                    {
+            <li class="collection-item avatar">
+                <img src="images/yuna.jpg" alt="Avatar" class="circle">
+                <span class="title">@user.UserName</span>
+                @if (user.IsOnline)
+    {
+            <i title="Online" class="material-icons">wifi</i>
+}
+                <p>
+                    @user.Email <br>
+                </p>
+                <div id="addButton">
+                    @Html.ActionLink("Add to friends", "AddToFriends", "Friend", new { area = "Friends", userId = ViewBag.UserId, id = user.Id, @class = "waves-effect waves-light btn-large" }, null)
+                </div>
+
+                <a class="btn-floating yellow darken-1" title="Write message"><i class="material-icons">mode_edit</i></a>
+
+                <a class="btn-floating green" title="Add to friends" href="@Url.Action("AddToFriends", "Friend", new { area = "Friends", userId = ViewBag.UserId, id = user.Id.ToString(), @class = "waves-effect waves-light btn-large" }, null)">
+                    <i class="material-icons">add</i>
+                </a>
+
+            </li>
+
+
+                }
+        </ul>
 
 </div>

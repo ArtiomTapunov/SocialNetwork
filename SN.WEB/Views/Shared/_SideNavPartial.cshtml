@@ -4,27 +4,6 @@
 
 @if (Request.IsAuthenticated)
 {
-    @*<ul id="slide-out" class="side-nav fixed">
-            <li>
-                <div class="user-view">
-                    <div class="background red lighten-3">
-                        <img src="~/Images/Mexico.jpg">
-                    </div>
-                    <img style="margin: auto" class="circle" src="~/Images/Cuba.jpg"/>
-                    <p style="text-align: center"><span class="black-text name">@User.Identity.GetUserName()</span></p>
-                    <p style="text-align: center"><span class="black-text email"> </span></p>
-                </div>
-            </li>
-            <li><div class="divider"></div></li>
-            <li><span><i class="small material-icons">account_circle</i>@Html.ActionLink(" My profile", "", "", new { area = "", @class = "waves-effect" }, null)</span></li>
-            <li ><span><i class="small material-icons">person</i>@Html.ActionLink(" Friends", "Index", "Friend", new { area = "Friends", id = User.Identity.GetUserId().ToString(), @class = "waves-effect" }, null)</span></li>
-            <li ><span><i class="small material-icons">question_answer</i>@Html.ActionLink(" Conversations", "Index", "Conversation", new { area= "Messages", @class = "waves-effect" }, null)</span></li>
-            <li ><span><i class="small material-icons">local_library</i>@Html.ActionLink(" News", "", "", new { area= "", @class = "waves-effect" }, null)</span></li>
-            <li ><span><i class="small material-icons">photo_library</i>@Html.ActionLink(" Photos", "Index", "Photo", new { area = "Documents", @class = "waves-effect" }, null)</span></li>
-            <li><span><i class="small material-icons">video_library</i>@Html.ActionLink(" Videos", "Index", "Video", new { area = "Documents", @class = "waves-effect" }, null)</span></li>
-            <li ><span><i class="small material-icons">description</i>@Html.ActionLink(" Documents", "Index", "UserDocument", new { area = "Documents", @class = "waves-effect" }, null)</span></li>
-
-        </ul>*@
 
 <ul id="slide-out" class="side-nav fixed">
     <li>
@@ -37,17 +16,20 @@
             <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
         </div>
     </li>
-    <li class="tabs"><a class="waves-effect" href="/Profile/Index"><i class="material-icons">account_circle</i>My Profile</a></li>
-    <li class="tabs"><a class="waves-effect" href="/Friends/Friend/Index"><i class="material-icons">person</i>Friends</a></li>
-    <li class="tabs"><a class="waves-effect" href="/Profile/Index"><i class="material-icons">question_answer</i>Conversations</a></li>
-    <li class="tabs"><a class="waves-effect" href="/Profile/Index"><i class="material-icons">local_library</i>News</a></li>
-    <li class="tabs"><a class="waves-effect" href="/Documents/Photo/Index"><i class="material-icons">photo_library</i>Photos</a></li>
-    <li class="tabs"><a class="waves-effect" href="/Documents/Video/Index"><i class="material-icons">video_library</i>Videos</a></li>
-    <li class="tabs"><a class="waves-effect" href="/Documents/UserDocument/Index"><i class="material-icons">description</i>Documents</a></li>
+    <li><a class="waves-effect" href="/Profiles/Profile/Index"><i class="material-icons">account_circle</i>Profile</a></li>
+    <li><a class="waves-effect" href="/Friends/Friend/Index"><i class="material-icons">person</i>Friends</a></li>
+    <li><a class="waves-effect" href="/Profile/Index"><i class="material-icons">question_answer</i>Conversations</a></li>
+    <li><a class="waves-effect" href="/Profile/Index"><i class="material-icons">local_library</i>News</a></li>
+    <li><a class="waves-effect" href="/Documents/Photo/Index"><i class="material-icons">photo_library</i>Photos</a></li>
+    <li><a class="waves-effect" href="/Documents/Video/Index"><i class="material-icons">video_library</i>Videos</a></li>
+    <li><a class="waves-effect" href="/Documents/UserDocument/Index"><i class="material-icons">description</i>Documents</a></li>
     <li><div class="divider"></div></li>
     <li><a class="waves-effect" href="#!"><i class="material-icons">build</i>Support</a></li>
+
+
+    @Html.ActionLink(" Profile", "Index", "Profile", new { area = "Profiles", id = User.Identity.GetUserId().ToString(), @class = "waves-effect" }, null)
+    @Html.ActionLink(" Friends", "Index", "Friend", new { area = "Friends", id = User.Identity.GetUserId().ToString(), @class = "waves-effect" }, null)
 </ul>
-    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 }
 
 <script>

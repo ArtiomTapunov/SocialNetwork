@@ -4,14 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SN.DomainModels.Enums
+namespace SN.DomainModels.SocialNetworkIModels
 {
-    public enum Languages
+    public class Post
     {
-        English,
-
-        Русский,
-
-        Español
     }
 }

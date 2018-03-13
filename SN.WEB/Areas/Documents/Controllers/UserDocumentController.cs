@@ -19,6 +19,11 @@ namespace SN.WEB.Areas.Documents.Controllers
             documentService = service;
         }
 
+        public ActionResult AddDocument()
+        {
+            return new EmptyResult();
+        }
+
 
         // GET: Documents/UserDocument
         public ActionResult Index()
